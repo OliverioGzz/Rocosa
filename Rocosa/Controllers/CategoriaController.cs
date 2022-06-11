@@ -16,5 +16,9 @@ namespace Rocosa.Controllers
             IEnumerable<Categoria> lista = _db.Categoria;
             return View(lista);
         }
+        public IActionResult Crear()
+        {
+            return View();
+        }
     }
 }
