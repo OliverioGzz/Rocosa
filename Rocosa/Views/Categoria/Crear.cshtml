@@ -9,6 +9,22 @@
         <div class="form-group row">
             <h2 class="text-info pl-3">Nueva Categoria</h2>
         </div>
+
+        <div class="row">
+            <div class="col.md-6">
+                <label asp-for="NombreCategoria" class="form-label">Nombre Categoria</label>
+                <input asp-for="NombreCategoria" class="form-control" />
+            </div>
+            <div class="col.md-6">
+                <label asp-for="MortrarOrden" class="form-label">Orden</label>
+                <input asp-for="MortrarOrden" class="form-control" />
+            </div>
+        </div>
+        <br />
+        <div class="d-grid gap-2 d-md-block">
+            <button type="submit" class="btn btn-primary">Crear Nueva</button>
+            <a asp-controller="Categoria" asp-action="Index" class="btn btn-success">Regresar</a>
+        </div>
     </div>
 </form>
 
