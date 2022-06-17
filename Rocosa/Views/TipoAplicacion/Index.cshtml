@@ -4,10 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*<div class="container-3">
+<div class="container-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Lista de Tipos de Aplicaciónes</h2>
+            <h2 class="text-primary">Lista de Tipos de Aplicaciones</h2>
         </div>
         <div class="col-6 text-end">
             <a asp-controller="TipoAplicacion" asp-action="Crear" class="btn btn-primary">Nuevo Tipo de Aplicación</a>
@@ -24,18 +24,13 @@
                     <th>
                         Nombre Tipo Aplicación
                     </th>
-                    <th>
-                        Orden
-                    </th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <th width="50%">@item.Id</th>
                         <th width="50%">@item.Nombre</th>
-                        <th></th>
                     </tr>
                 }
             </tbody>
@@ -44,6 +39,6 @@
     else
     {
         <p>No hay registros de Tipo Aplicación</p>
-    }*@
+    }
 </div>
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Rocosa.Datos;
+using Rocosa.Models;
 
 namespace Rocosa.Controllers
 {
@@ -12,7 +13,20 @@ namespace Rocosa.Controllers
         }
         public IActionResult Index()
         {
+            IEnumerable<TipoAplicacion> lista = _db.TipoAplicacion;
+            return View(lista);
+        }
+        public IActionResult Crear()
+        {
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Crear(TipoAplicacion tipoAplicacion)
+        {
+            _db.TipoAplicacion.Add(tipoAplicacion);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
